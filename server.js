@@ -14,11 +14,12 @@ const image = require('./controllers/image')
 const db = knex({
     client: 'pg',
     connection: {
-      host : 'postgresql-animated-08648', //add your local host
-      user : 'postgres', //add username for your database
-      port: 5432, // add your port #
-      password : '1838', //add your password here
-      database : 'smart-brain' //add your database name here
+       host : process.env.DATABASE_URL,                             //'postgresql-animated-08648', //add your local host
+      ssl: true
+      // user : 'postgres', //add username for your database
+      // port: 5432, // add your port #
+      // password : '1838', //add your password here
+      // database : 'smart-brain' //add your database name here
     }
 });
 
