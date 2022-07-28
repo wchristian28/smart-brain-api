@@ -14,12 +14,9 @@ const image = require('./controllers/image')
 const db = knex({
     client: 'pg',
     connection: {
-      connectionString : process.env.DATABASE_URL,                             //'postgresql-animated-08648', //add your local host
+      connectionString : process.env.DATABASE_URL,                            
       ssl: true
-      // user : 'postgres', //add username for your database
-      // port: 5432, // add your port #
-      // password : '1838', //add your password here
-      // database : 'smart-brain' //add your database name here
+  
     }
 });
 
@@ -30,7 +27,7 @@ const db = knex({
 
 const app = express();
 
-app.use(cors())
+app.use(cors());
 app.use(bodyParser.json());
 
 

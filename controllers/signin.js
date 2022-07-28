@@ -23,7 +23,7 @@ db.select('email', 'hash').from('login')
 
 module.exports = {
   handleSignin: handleSignin
-}
+};
 
 
 
