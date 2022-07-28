@@ -9,13 +9,15 @@ const signin = require('./controllers/signin')
 const profile = require('./controllers/profile')
 const image = require('./controllers/image')
 
-
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
 
 const db = knex({
     client: 'pg',
     connection: {
       connectionString : process.env.DATABASE_URL,                            
-      ssl: true
+      ssl: {
+        rejectUnauthorized: false
+      }
   
     }
 });
@@ -26,7 +28,6 @@ const db = knex({
 // });
 
 const app = express();
-
 app.use(cors());
 app.use(bodyParser.json());
 
