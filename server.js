@@ -14,7 +14,7 @@ const image = require('./controllers/image')
 const db = knex({
     client: 'pg',
     connection: {
-      host : 'localhost', //add your local host
+      host : 'postgresql-animated-08648', //add your local host
       user : 'postgres', //add username for your database
       port: 5432, // add your port #
       password : '1838', //add your password here
