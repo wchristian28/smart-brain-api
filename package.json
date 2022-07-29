@@ -21,6 +21,10 @@
     "pg": "^8.7.3",
     "nodemon": "^2.0.19"
   },
+
+  "engines": {
+    "node": "17.9.0"
+    },
   "devDependencies": {
     "nodemon": "^2.0.19"
   }
